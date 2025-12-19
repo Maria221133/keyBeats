@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keybeats</title>
+    <!-- Include the stylesheet -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class = "all">
+        <header id = "header">
+            <div>
+                <h1 id = "title">Key Beat Maker</h1>
+                <p>Click the pads or use your keyboard</p>
+            </div>
+            <div>
+                <button id = "randomize">Randomize Tones</button>
+                <button id = "panic">STOP</button>
+            </div>
+        </header>
+
+        <div class = "keys">
+            <div class = "grid" id = "keyGrid"></div>
+        </div>
+
+        <div class="controls">
+            <h2>Global</h2>
+            <p>Master Volume: <span id = "volVal">80%</span></p>
+            <input id = "Vol" type="range" min="0" max="100" value="80">
+
+            <h2>Envelope (ADSR)</h2>
+            <p>Attack</p><input id = "attack" type="range">
+            <p>Decay</p><input id = "decay" type="range">
+            <p>Sustain</p><input id = "sustain" type="range">
+            <p>Release</p><input id = "release" type="range">
+
+            <h2>Options</h2>
+            <p><input id = "Perc" type="checkbox"> Percussive mode</p><br>
+            <p><input id = "keyHints" checked type="checkbox"> Show key hints</p>
+
+            <h2>Key map</h2>
+            <div class="map" id="kbdMap"></div>
+
+            <div>
+                <button id="save">Save Preset</button>
+                <button id="load">Load Preset</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Save/Load Preset</h3>
+            <p>This is a modal dialog box.</p>
+        </div>
+    </div>
+
+
+    <!-- Include the javascript -->
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>
